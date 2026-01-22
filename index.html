@@ -3,43 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataLinker | Intelligence de Données</title>
+    <title>DataLinker | Intelligence de Données & IA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-[#0f172a] text-slate-200">
-    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none"></div>
-    <div class="relative min-h-screen flex flex-col items-center justify-center px-4">
-        <span class="px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-6">
-            Lancement prévu : Février 2026
-        </span>
+    <link href="https://cdnjs.cloudflare.com" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com');
         
-        <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-white mb-6">
-            DATA<span class="text-blue-500 underline decoration-blue-500/30">LINKER</span>
-        </h1>
-        
-        <p class="text-xl md:text-2xl text-slate-400 max-w-3xl text-center mb-10 leading-relaxed">
-            Ne perdez plus de temps à copier-coller. 
-            <span class="text-white font-semibold">Automatisez vos flux de données</span> entre vos vieux systèmes et vos nouveaux outils grâce à notre IA propriétaire.
-        </p>
+        body { 
+            background-color: #050a15; 
+            color: #fff; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
 
-        <div class="w-full max-w-lg p-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl shadow-[0_0_50px_-12px_rgba(37,99,235,0.5)]">
-            <div class="bg-[#1e293b] rounded-[14px] p-8">
-                <h2 class="text-xl font-bold text-white mb-2">Devenez Beta-testeur</h2>
-                <p class="text-slate-400 mb-6 text-sm">Soyez parmi les 50 premières entreprises à automatiser leur croissance.</p>
-                <div class="flex flex-col gap-3">
-                    <input type="email" placeholder="votre@email-pro.com" class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all">
-                    <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg shadow-lg shadow-blue-900/20 transition-all active:scale-[0.98]">
-                        Obtenir un accès prioritaire →
-                    </button>
-                </div>
+        /* Effet de lueur en arrière-plan */
+        .glow-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(5, 10, 21, 0) 70%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Animation d'entrée */
+        .fade-in { animation: fadeInUp 1s ease-out forwards; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex items-center justify-center p-4">
+    
+    <div class="glow-bg"></div>
+
+    <main class="relative z-10 w-full max-w-5xl">
+        
+        <!-- Header / Badge -->
+        <div class="flex justify-center mb-8 fade-in" style="animation-delay: 0.1s;">
+            <div class="flex items-center gap-2 px-4 py-2 rounded-full glass-card">
+                <span class="text-xs font-bold tracking-widest text-blue-400 uppercase">Projet Certifié 2026</span>
+                <!-- Badge Vérifié SVG -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L13.73 3.86L16.27 3.4L17.27 5.73L19.73 6.27L19.73 8.86L21.86 10.6L20.86 13.07L21.86 15.53L19.73 17.27L19.73 19.86L17.27 20.4L16.27 22.73L13.73 22.27L12 24.13L10.27 22.27L7.73 22.73L6.73 20.4L4.27 19.86L4.27 17.27L2.14 15.53L3.14 13.07L2.14 10.6L4.27 8.86L4.27 6.27L6.73 5.73L7.73 3.4L10.27 3.86L12 2Z" fill="#1D9BF0"/>
+                    <path d="M9.5 12.5L11.5 14.5L15.5 10.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
         </div>
 
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center opacity-60 text-sm italic">
-            <div>⚡️ Sync en temps réel</div>
-            <div>🔒 Sécurité Bancaire</div>
-            <div>🤖 IA Intégrée</div>
+        <!-- Titre Principal -->
+        <div class="text-center mb-12 fade-in" style="animation-delay: 0.2s;">
+            <h1 class="text-7xl md:text-9xl font-extrabold tracking-tighter mb-6 leading-none">
+                DATA<span class="text-gradient">LINKER</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
+                Libérez vos données des silos. <br class="hidden md:block">
+                <span class="text-white font-medium italic">Automatisation intelligente</span> entre vos systèmes hérités et le futur du Cloud.
+            </p>
         </div>
-    </div>
+
+        <!-- Formulaire & CTA -->
+        <div class="max-w-xl mx-auto fade-in" style="animation-delay: 0.3s;">
+            <div class="glass-card p-10 rounded-[40px] shadow-2xl relative overflow-hidden">
+                <!-- Décoration interne -->
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl"></div>
+                
+                <h3 class="text-2xl font-bold text-white mb-4">Accès Beta-Testeur 01</h3>
+                <p class="text-slate-400 mb-8">Rejoignez les entreprises qui dominent le flux de données en 2026.</p>
+                
+                <form class="space-y-4">
+                    <input type="email" placeholder="votre@email-pro.com" 
+                           class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all text-white placeholder:text-slate-600">
+                    
+                    <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-2xl shadow-xl shadow-blue-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                        Réserver mon accès prioritaire
+                    </button>
+                </form>
+                
+                <p class="mt-6 text-center text-xs text-slate-500">
+                    <i class="fas fa-lock mr-2 text-blue-500/50"></i> Chiffrement de bout en bout conforme RGPD 2.0
+                </p>
+            </div>
+        </div>
+
+        <!-- Mini Features -->
+        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 text-center fade-in" style="animation-delay: 0.4s;">
+            <div class="glass-card py-6 px-4 rounded-2xl group hover:border-blue-500/50 transition-all">
+                <i class="fas fa-bolt text-blue-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Ultra Fast Sync</p>
+            </div>
+            <div class="glass-card py-6 px-4 rounded-2xl group hover:border-blue-500/50 transition-all">
+                <i class="fas fa-brain text-purple-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">IA Propriétaire</p>
+            </div>
+            <div class="glass-card py-6 px-4 rounded-2xl group hover:border-blue-500/50 transition-all">
+                <i class="fas fa-shield-alt text-green-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Zéro Leak</p>
+            </div>
+            <div class="glass-card py-6 px-4 rounded-2xl group hover:border-blue-500/50 transition-all">
+                <i class="fas fa-code-branch text-cyan-400 mb-3 group-hover:scale-110 transition-transform"></i>
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">API First</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Discret -->
+    <footer class="absolute bottom-6 w-full text-center text-slate-600 text-[10px] tracking-[0.3em] uppercase">
+        DataLinker Technologies © 2026 | Global Systems
+    </footer>
+
 </body>
 </html>
